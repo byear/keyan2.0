@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ch">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>苏州大学文正学院科研管理系统</title>
+
+        <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='common.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='slide.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='flat-ui.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='jquery.nouislider.css')}}">
+
+    </head>
+
+    <body>
+        <div id="wrap">
+            <!-- 左侧菜单栏目块 -->
+            <div class="leftMeun" id="leftMeun">
+                <div id="logoDiv">
+                    <p><span>科研管理系统</span></p>
+                </div>
+                <div id="personInfor">
+                    <p id="userName">欢迎登录 ,Byear！</p><br>
+                    <p><a href='/'>退出登录</a></p>
+                </div>
+                <div class="meun-title">导航栏</div>
+                 <div class="meun-item" aria-controls="sour" role="tab" data-toggle="tab"><a href='/tongzhi'>通知公告</a></div>
+                <div class="meun-item meun-item-active" aria-controls="scho" role="tab" data-toggle="tab"><a href='/chengguo' >科研成果</a></div>
+                <div class="meun-item" aria-controls="scho" role="tab" data-toggle="tab"><a href='/guanli'>科研管理</a></div>
+                <div class="meun-item" aria-controls="regu" role="tab" data-toggle="tab"><a href='/shangchuan'>上传论文</a></div>
+                <div class="meun-item" aria-controls="stud" role="tab" data-toggle="tab"><a href='/pachong'>论文爬取(beta)</a></div>
+            </div>
+            <!-- 论文成果模块 -->
+            <div id="rightContent">
+                <a class="toggle-btn" id="nimei">
+                    <i class="glyphicon glyphicon-align-justify"></i>
+                </a>
+                <!-- Tab panes -->
+
+                <div class="tab-content"  style="margin: 60px auto;width:1111px; line-height:35px;">
+                    <!-- 科研动态 -->
+                    <a href='http://news.sdwz.cn/_upload/article/files/7b/f8/fbf7f36e451b82ddd7b3a1e2d022/6dcfb25a-6bbe-4a4d-8253-95270643b2b7.pdf' target='_blank' title='支撑点与振源重合的圆形薄板二维驻波的实验与仿真研究'>支撑点与振源重合的圆形薄板二维驻波的实验与仿真研究</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/_upload/article/files/32/ff/ee46af184d67808a4f9be6eac15d/6074cfe7-a4bd-4e26-a861-1ca8290d636a.pdf' target='_blank' title='新能源材料与器件专业实验室建设的探索'>新能源材料与器件专业实验室建设的探索</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/_upload/article/files/62/4f/196878b040b6ad8a6ac85a919985/92b28c20-4860-4971-ae08-e02ac4f4eac2.pdf' target='_blank' title='几个热门安培力小实验的诠释'>几个热门安培力小实验的诠释</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/_upload/article/files/72/8b/37a2e7d046fc9704853159338a98/f6f69f09-8beb-4e95-8a64-4e24f40e98ee.pdf' target='_blank' title='基于用户体验的数字图书馆网站现状调查与分析'>基于用户体验的数字图书馆网站现状调查与分析</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/_upload/article/files/d7/6c/fc596e8d42b59bde121c4d4753c3/448c9439-6ab8-44d5-ae38-f08e543c4541.pdf' target='_blank' title='基于物联网的便携式心率监测和定位系统'>基于物联网的便携式心率监测和定位系统</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/_upload/article/files/ab/bd/c8be18554f9ea6379c14cd8acc3b/505212a1-a406-4d3d-8462-d9be4b609488.pdf' target='_blank' title='基于结构方程模型的竞争情报与危机管理关系的实证研究'>基于结构方程模型的竞争情报与危机管理关系的实证研究</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/_upload/article/files/17/2c/6060d3a54bdcbafb6523d51fc465/243d0472-9e10-4a05-a1af-a89197f0a62c.pdf' target='_blank' title='基于价值工程与振动冲击测试的包装结构优化设计'>基于价值工程与振动冲击测试的包装结构优化设计</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/_upload/article/files/1e/4b/ada4d32848bc921ab41a4746b3ee/32194f7b-d9d8-490f-8559-054f66f38f19.pdf' target='_blank' title='互联网思维能力培养融入计算机课程的研究和实践'>互联网思维能力培养融入计算机课程的研究和实践</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/_upload/article/files/bb/47/0707ae9242629f9cf3539f680e27/3e87d83b-b5bb-4cb6-bc40-0954a002181c.pdf' target='_blank' title='核心机驱动风扇级可变弯度导叶的试验研究'>核心机驱动风扇级可变弯度导叶的试验研究</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/_upload/article/files/c1/92/fd709a614b29a236e448e7e494ef/ed8057f2-be33-47eb-8c6a-8ebdd34be47b.pdf' target='_blank' title='共振演示仪的数字化研究'>共振演示仪的数字化研究</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/_upload/article/files/a3/c4/4645e89841e48fae048da60df18f/049d33f9-ca28-4d31-9c9a-3ef70f5d356f.pdf' target='_blank' title='低级热温差发电器的开发应用研究'>低级热温差发电器的开发应用研究</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/_upload/article/files/21/ee/e112df5a41ab9f0ba6a3b2022255/ef6cf1f1-2456-482d-a021-01c0912a9b1d.pdf' target='_blank' title='EVE_NG与eNSP整合搭建跨平台仿真实验环境'>EVE_NG与eNSP整合搭建跨平台仿真实验环境</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/2018/0703/c154a28775/page.htm' target='_blank' title='基于用户需求的高校图书馆微信公众平台运营策略和功能设计研究——以苏州科技大学图书馆为例'>基于用户需求的高校图书馆微信公众平台运营策略和功能设计研究——...</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/2018/0514/c154a28104/page.htm' target='_blank' title='基于四维超混沌系统观测器的语音通讯保密机制的研究'>基于四维超混沌系统观测器的语音通讯保密机制的研究</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                    <br><a href='http://news.sdwz.cn/2018/0514/c154a28101/page.htm' target='_blank' title='Factors Influencing Students’WTC in a Chinese EFL Classroom: From the Ecological Perspective'>Factors Influencing Students’WTC in a Chinese EFL Classroom...</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2018-12-25</span>
+                </div>
+
+<div id="wp_paging_w27" align="center">
+<ul class="wp_paging clearfix">
+
+     <li class="page_nav">
+         <a class="first" href=# target="_self"><span>第一页</span></a>
+         <a class="prev" href=# target="_self"><span>&lt;&lt;上一页</span></a>
+         <a class="next" href=# target="_self"><span>下一页&gt;&gt;</span></a>
+         <a class="last" href=# target="_self"><span>尾页</span></a>
+     </li>
+     <li class="page_jump">
+         <span class="pages">页码&nbsp;<em class="curr_page">2</em>/<em class="all_pages">3</em></span>
+         <span><input class="pageNum" type="text" /><input type="hidden" class="currPageURL" value=""></span>
+         <span><a class="pagingJump" href=# target="_self">跳转到&nbsp;</a></span>
+     </li>
+</ul>
+</div>
+
+
+
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ch">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>苏州大学文正学院科研管理系统</title>
+
+        <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='common.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='slide.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='flat-ui.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='jquery.nouislider.css')}}">
+
+        <!--写一个style控制form位置-->
+        <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+             form {
+            width: 500px;
+            border: 1px solid rgba(0,0,0,0.7);
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            margin: 100px auto;
+        }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="wrap">
+            <!-- 左侧菜单栏目块 -->
+            <div class="leftMeun" id="leftMeun">
+                <div id="logoDiv">
+                    <p><span>科研管理系统</span></p>
+                </div>
+                <div id="personInfor">
+                    <p id="userName">欢迎登录 ,Byear！</p><br>
+                    <p><a href='/'>退出登录</a></p>
+                </div>
+                <div class="meun-title">导航栏</div>
+                 <div class="meun-item" aria-controls="sour" role="tab" data-toggle="tab"><a href='/tongzhi'>通知公告</a></div>
+                <div class="meun-item" aria-controls="scho" role="tab" data-toggle="tab"><a href='/chengguo' >科研成果</a></div>
+                <div class="meun-item" aria-controls="scho" role="tab" data-toggle="tab"><a href='/guanli'>科研管理</a></div>
+                <div class="meun-item meun-item-active" aria-controls="regu" role="tab" data-toggle="tab"><a href='/shangchuan'>上传论文</a></div>
+                <div class="meun-item" aria-controls="stud" role="tab" data-toggle="tab"><a href='/pachong'>论文爬取(beta)</a></div>
+
+            </div>
+            <!-- 右侧具体内容栏目 -->
+            <div id="rightContent">
+                <a class="toggle-btn" id="nimei">
+                    <i class="glyphicon glyphicon-align-justify"></i>
+                </a>
+
+
+    <!--在文件上传时form表单的数据传输方式必须为post，并且编码格式必须为multipart/form-data，否则服务器端是无法获取传输的文件数据-->
+    <form  method="post" >
+    <!--enctype="multipart/form-data"-->
+        <div>
+            &nbsp;&nbsp;选择需要上传的科研论文:
+            <label for="file">
+                <img src="{{img_path}}/photo.jpg" alt="" id="photo">
+            </label>
+            <input type="file" id="file" name="file">
+        </div>
+        <div>
+            班级: <input type="text" name="nickname">
+        </div>
+        <div>
+            姓名: <input type="text" name="age">
+        </div>
+        <div>
+            类别: <input type="radio" name="sex" value="男" checked>科研论文
+            <input type="radio" name="sex" value="女">毕业论文
+        </div>
+
+        <div>
+           &nbsp;<input type="submit" value="提交">
+        </div>
+    </form>
+
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

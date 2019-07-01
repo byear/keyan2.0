@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="ch">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>苏州大学文正学院科研管理系统</title>
+
+        <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+        <script src="{{url_for('static', filename='bootstrap.min.js')}}"></script>
+
+        <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='common.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='slide.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='flat-ui.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='jquery.nouislider.css')}}">
+    </head>
+
+    <!--<script>-->
+        <!--var ck = function(){-->
+            <!--var x = prompt ("作者名: ", "Tom");/*第一个变量为提示语，第二个变量为默认初始值*/-->
+            <!--alert(x);-->
+        <!--}-->
+    <!--</script>-->
+
+
+    <body>
+        <div id="wrap">
+            <!-- 左侧菜单栏目块 -->
+            <div class="leftMeun" id="leftMeun">
+                <div id="logoDiv">
+                    <p><span>科研管理系统</span></p>
+                </div>
+                <div id="personInfor">
+                    <p id="userName">欢迎登录 ,Byear！</p><br>
+                    <p><a href='/'>退出登录</a></p>
+                </div>
+                <div class="meun-title">导航栏</div>
+                 <div class="meun-item" ><a href='/tongzhi'>通知公告</a></div>
+                <div class="meun-item" ><a href='/chengguo' >科研成果</a></div>
+                <div class="meun-item meun-item-active" ><a href='/guanli'>科研管理</a></div>
+                <div class="meun-item"><a href='/shangchuan'>上传论文</a></div>
+                <div class="meun-item" ><a href='/pachong'>论文爬取(beta)</a></div>
+
+            </div>
+            <!-- 右侧具体内容栏目 -->
+            <div id="rightContent">
+                <a class="toggle-btn" id="nimei">
+                    <i class="glyphicon glyphicon-align-justify"></i>
+                </a>
+                <!--科研管理模块-->
+            <div role="tabpanel" class="tab-pane" id="scho">
+
+                <div class="check-div form-inline">
+                    <div class="col-xs-3">
+                            <button  class="btn btn-yellow btn-xs" data-toggle="modal" data-target="#addSchool">添加作者 </button>
+                    </div>
+
+                    <div class="col-lg-4 col-xs-5">
+                        <input type="text" class=" form-control input-sm " placeholder="输入文字搜索">
+                        <button class="btn btn-white btn-xs ">查 询 </button>
+                    </div>
+                    <div class="col-lg-3 col-lg-offset-1 col-xs-3" style="padding-right: 40px;text-align: right;float: right;">
+                        <label for="paixu">排序:&nbsp;</label>
+                        <select class="form-control">
+                            <option>发表时间</option>
+                            <option>发表数量</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="data-div">
+                    <div class="row tableHeader">
+                        <div class="col-xs-1 ">
+                            编码
+                        </div>
+                        <div class="col-xs-2 ">
+                            教师
+                        </div>
+                        <div class="col-xs-1">
+                            2019期刊发表
+                        </div>
+                        <div class="col-xs-1">
+                            2018期刊发表
+                        </div>
+                        <div class="col-xs-2">
+                            具体信息
+                        </div>
+
+                        <div class="col-xs-2">
+                            操作(仅管理员)
+                        </div>
+                    </div>
+                    <div class="tablebody">
+
+                        <div class="row">
+                            <div class="col-xs-1 ">
+                                1
+                            </div>
+                            <div class="col-xs-2">
+                                凌兴宏
+                            </div>
+                            <div class="col-xs-1">
+                                3
+                            </div>
+                            <div class="col-xs-1">
+                                5
+                            </div>
+                            <div class="col-xs-2">
+                                <a href="https://kns.cnki.net/kcms/detail/knetsearch.aspx?dbcode=CJFQ&sfield=au&skey=%e5%87%8c%e5%85%b4%e5%ae%8f&code=11184245" class="linkCcc">查看</a>
+                            </div>
+
+                            <div class="col-xs-2">
+                                <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseSchool">修改</button>
+                                <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteSchool">删除</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tablebody">
+
+                        <div class="row">
+                            <div class="col-xs-1 ">
+                                2
+                            </div>
+                            <div class="col-xs-2">
+                                王辉
+                            </div>
+                            <div class="col-xs-1">
+                                0
+                            </div>
+                            <div class="col-xs-1">
+                                2
+                            </div>
+                            <div class="col-xs-2">
+                                <a href="https://kns.cnki.net/kcms/detail/knetsearch.aspx?dbcode=CJFQ&sfield=au&skey=%e7%8e%8b%e8%be%89&code=08867348" class="linkCcc">查看</a>
+                            </div>
+
+                            <div class="col-xs-2">
+                                <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseSchool">修改</button>
+                                <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteSchool">删除</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tablebody">
+
+                        <div class="row">
+                            <div class="col-xs-1 ">
+                                3
+                            </div>
+                            <div class="col-xs-2">
+                                唐灯平
+                            </div>
+                            <div class="col-xs-1">
+                                2
+                            </div>
+                            <div class="col-xs-1">
+                                3
+                            </div>
+                            <div class="col-xs-2">
+                                <a href="https://kns.cnki.net/kcms/detail/knetsearch.aspx?dbcode=CJFQ&sfield=au&skey=%e5%94%90%e7%81%af%e5%b9%b3&code=27575823" class="linkCcc">查看</a>
+                            </div>
+
+                            <div class="col-xs-2">
+                                <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseSchool">修改</button>
+                                <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteSchool">删除</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tablebody">
+
+                        <div class="row">
+                            <div class="col-xs-1 ">
+                                4
+                            </div>
+                            <div class="col-xs-2">
+                                王林
+                            </div>
+                            <div class="col-xs-1">
+                                1
+                            </div>
+                            <div class="col-xs-1">
+                                0
+                            </div>
+                            <div class="col-xs-2">
+                                <a href="https://kns.cnki.net/kcms/detail/knetsearch.aspx?dbcode=CJFQ&sfield=au&skey=%e7%8e%8b%e6%9e%97&code=08848685" class="linkCcc">查看</a>
+                            </div>
+
+                            <div class="col-xs-2">
+                                <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseSchool">修改</button>
+                                <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteSchool">删除</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tablebody">
+
+                        <div class="row">
+                            <div class="col-xs-1 ">
+                                5
+                            </div>
+                            <div class="col-xs-2">
+                                魏慧
+                            </div>
+                            <div class="col-xs-1">
+                                1
+                            </div>
+                            <div class="col-xs-1">
+                                2
+                            </div>
+                            <div class="col-xs-2">
+                                <a href="https://kns.cnki.net/kcms/detail/knetsearch.aspx?dbcode=CJFQ&sfield=au&skey=%e9%ad%8f%e6%85%a7&code=10710701" class="linkCcc">查看</a>
+                            </div>
+
+                            <div class="col-xs-2">
+                                <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseSchool">修改</button>
+                                <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteSchool">删除</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tablebody">
+
+                        <div class="row">
+                            <div class="col-xs-1 ">
+                                6
+                            </div>
+                            <div class="col-xs-2">
+                                姚望舒
+                            </div>
+                            <div class="col-xs-1">
+                                0
+                            </div>
+                            <div class="col-xs-1">
+                                1
+                            </div>
+                            <div class="col-xs-2">
+                                <a href="https://kns.cnki.net/kcms/detail/knetsearch.aspx?dbcode=CJFQ&sfield=au&skey=%e5%a7%9a%e6%9c%9b%e8%88%92&code=14173260" class="linkCcc">查看</a>
+                            </div>
+
+                            <div class="col-xs-2">
+                                <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseSchool">修改</button>
+                                <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteSchool">删除</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--页码块-->
+                <footer class="footer">
+                    <ul class="pagination">
+                        <li>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                            页
+                        </li>
+                        <li class="gray">
+                            共20页
+                        </li>
+                        <li>
+                            <i class="glyphicon glyphicon-menu-left">
+                            </i>
+                        </li>
+                        <li>
+                            <i class="glyphicon glyphicon-menu-right">
+                            </i>
+                        </li>
+                    </ul>
+                </footer>
+
+                <!--这三个部分比较难搞-->
+                <!--弹出添加作者窗口-->
+                <div class="modal fade" id="addSchool" role="dialog" aria-labelledby="gridSystemModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="gridSystemModalLabel">添加作者</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <form class="form-horizontal">
+                                        <div class="form-group ">
+                                            <label for="sName" class="col-xs-3 control-label">作者姓名：</label>
+                                            <div class="col-xs-8 ">
+                                                <input type="email" class="form-control input-sm duiqi" id="sName" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label for="sName" class="col-xs-3 control-label">2019发表：</label>
+                                            <div class="col-xs-8 " style="left:-24px;width:80px;height:9px">
+                                                <!--<input type="email" class="form-control input-sm duiqi" id="sName" placeholder="">-->
+                                                <select>
+                                                  <option value ="volvo">0</option>
+                                                  <option value ="saab">1</option>
+                                                  <option value="opel">2</option>
+                                                  <option value="audi">3</option>
+                                                  <option value="audi">4</option>
+                                                  <option value="audi">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="sLink" class="col-xs-3 control-label">2018发表：</label>
+                                            <div class="col-xs-8 " style="left:-24px;width:80px;height:9px">
+                                                <!--<input type="" class="form-control input-sm duiqi" id="sLink" placeholder="">-->
+                                                <select>
+                                                  <option value ="volvo">0</option>
+                                                  <option value ="saab">1</option>
+                                                  <option value="opel">2</option>
+                                                  <option value="audi">3</option>
+                                                  <option value="audi">4</option>
+                                                  <option value="audi">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
+                                <button type="button" class="btn btn-xs btn-green">添加</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+                <!--弹出修改用户窗口-->
+                <div class="modal fade" id="reviseSchool" role="dialog" aria-labelledby="gridSystemModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="gridSystemModalLabel">修改信息</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <form class="form-horizontal">
+                                        <div class="form-group ">
+                                            <label for="sName" class="col-xs-3 control-label">作者姓名：</label>
+                                            <div class="col-xs-8 ">
+                                                <input type="email" class="form-control input-sm duiqi" id="sName" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label for="sName" class="col-xs-3 control-label">2019发表：</label>
+                                            <div class="col-xs-8 ">
+                                                <input type="email" class="form-control input-sm duiqi" id="sName" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="sLink" class="col-xs-3 control-label">2018发表：</label>
+                                            <div class="col-xs-8 ">
+                                                <input type="" class="form-control input-sm duiqi" id="sLink" placeholder="">
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
+                                <button type="button" class="btn btn-xs btn-green">保 存</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+                <!--弹出删除用户警告窗口-->
+                <div class="modal fade" id="deleteSchool" role="dialog" aria-labelledby="gridSystemModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="gridSystemModalLabel">提示</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    确定要删除该地区？删除后不可恢复！
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
+                                <button type="button" class="btn btn-xs btn-danger">保 存</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>

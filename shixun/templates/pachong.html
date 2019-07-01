@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ch">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>苏州大学文正学院科研管理系统</title>
+
+        <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='common.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='slide.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='flat-ui.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='jquery.nouislider.css')}}">
+    </head>
+
+    <body>
+        <div id="wrap">
+            <!-- 左侧菜单栏目块 -->
+            <div class="leftMeun" id="leftMeun">
+                <div id="logoDiv">
+                    <p><span>科研管理系统</span></p>
+                </div>
+                <div id="personInfor">
+                    <p id="userName">欢迎登录 ,Byear！</p><br>
+                    <p><a href='/'>退出登录</a></p>
+                </div>
+                <div class="meun-title">导航栏</div>
+                 <div class="meun-item" aria-controls="sour" role="tab" data-toggle="tab"><a href='/tongzhi'>通知公告</a></div>
+                <div class="meun-item" aria-controls="scho" role="tab" data-toggle="tab"><a href='/chengguo' >科研成果</a></div>
+                <div class="meun-item" aria-controls="scho" role="tab" data-toggle="tab"><a href='/guanli'>科研管理</a></div>
+                <div class="meun-item" aria-controls="regu" role="tab" data-toggle="tab"><a href='/shangchuan'>上传论文</a></div>
+                <div class="meun-item meun-item-active" aria-controls="stud" role="tab" data-toggle="tab"><a href='/pachong'>论文爬取(beta)</a></div>
+
+            </div>
+            <!-- 右侧具体内容栏目 -->
+            <div id="rightContent">
+                <a class="toggle-btn" id="nimei">
+                    <i class="glyphicon glyphicon-align-justify"></i>
+                </a>
+
+                <!--爬虫页面-->
+                <div align="center" style="margin-top:150px">
+                    <font size="5" color="black"><strong>这是一个知网论文爬虫</strong></font><br><br>
+                </div>
+                <div align="center" style="margin-top:0px">
+                    <form method="post" class="pachong"   style="margin-top:0px">
+                        <font size="3" color="black"><strong>请输入关键字：</strong></font>
+                        <input type="text" maxlength="100"  name="guanjianzi" class="i-text"  value=""/><br><br>
+                        <input class="submit" type="submit" name="submit" value="立即搜索" >
+                    </form>
+                </div>
+    </div>
+</div>
+
+</body>
+
+</html>
